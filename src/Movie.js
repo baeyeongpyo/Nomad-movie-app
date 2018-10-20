@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import './Movie.css'
-import { prototype } from 'stream';
 
 Movie.PropTypes ={
         title : PropTypes.string.isRequired,
-        poster: PropTypes.string
+        poster: PropTypes.string.isRequired
+}
+
+MoviePoster.PropTypes ={
+    poster : PropTypes.string.isRequired
 }
 
 function Movie({title, poster}){
@@ -19,7 +22,7 @@ function Movie({title, poster}){
 
 function MoviePoster({poster}){
     return(
-        <img src={poster} height="300px" width="200px"/>
+        <img class="posterImg" src={poster} alt=""/>
     )
 }
 
